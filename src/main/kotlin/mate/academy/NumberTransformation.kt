@@ -6,8 +6,12 @@ package mate.academy
     If the number is not present return null
  */
 
-fun getReminder(numberStr: String?) : Int? {
+const val MULTIPLIER = 3
+const val ADDITION = 10
+const val DIVISOR = 11
+
+fun getReminder(numberStr: String?): Int? {
     return numberStr
         ?.toIntOrNull()
-        ?.let { ((it * 3) + 10) %  11}
+        ?.let { ((it * MULTIPLIER) + ADDITION) % DIVISOR }
 }
